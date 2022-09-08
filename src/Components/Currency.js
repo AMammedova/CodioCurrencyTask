@@ -31,7 +31,7 @@ function Currency() {
         });
 
     })
-    const fetchCurr=useCallback(()=>{
+    const fetchCurr=useEffect(()=>{
         array.length=0;
         arr.map((x,i)=>{
            console.log(x)
@@ -51,7 +51,7 @@ function Currency() {
           
           
         })
-    })
+    },[fromCurrency,toCurrency])
     
     function flip() {
         var temp = fromCurrency;
